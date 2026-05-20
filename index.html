@@ -1,0 +1,417 @@
+<!DOCTYPE html><html class="light" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&amp;family=Be+Vietnam+Pro:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<title>Bazarcito</title>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#404b1b",
+                    "surface-bright": "#fefae0",
+                    "primary-fixed": "#ffdbd1",
+                    "inverse-on-surface": "#f5f1d8",
+                    "surface-tint": "#9f4026",
+                    "tertiary": "#8b4c11",
+                    "on-primary-container": "#fffbff",
+                    "surface-dim": "#dedbc2",
+                    "tertiary-fixed": "#ffdcc4",
+                    "on-secondary-fixed": "#171e00",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#802a11",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#ede9cf",
+                    "on-secondary-container": "#5c6834",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "background": "#fefae0",
+                    "surface-container-low": "#f8f4db",
+                    "primary": "#9c3e24",
+                    "on-tertiary-container": "#fffbff",
+                    "surface-variant": "#e7e3ca",
+                    "on-tertiary-fixed": "#2f1400",
+                    "on-tertiary-fixed-variant": "#6f3800",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#323120",
+                    "outline-variant": "#ddc0b9",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#56423d",
+                    "on-surface": "#1d1c0d",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#f2efd5",
+                    "surface-container-highest": "#e7e3ca",
+                    "on-primary-fixed": "#3b0900",
+                    "tertiary-container": "#a96428",
+                    "primary-container": "#bc5639",
+                    "tertiary-fixed-dim": "#ffb780",
+                    "inverse-primary": "#ffb5a1",
+                    "secondary-container": "#d8e6a6",
+                    "on-background": "#1d1c0d",
+                    "secondary": "#586330",
+                    "error-container": "#ffdad6",
+                    "surface": "#fefae0",
+                    "secondary-fixed-dim": "#bfcd8f",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "outline": "#89726c",
+                    "secondary-fixed": "#dbe9a9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "margin-mobile": "16px",
+                    "lg": "48px",
+                    "sm": "12px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "base": "8px",
+                    "xl": "80px",
+                    "md": "24px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Be Vietnam Pro"],
+                    "label-md": ["Be Vietnam Pro"],
+                    "headline-lg-mobile": ["Vollkorn"],
+                    "headline-lg": ["Vollkorn"],
+                    "display-lg": ["Vollkorn"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "label-sm": ["Be Vietnam Pro"],
+                    "headline-md": ["Vollkorn"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .curated-shadow {
+            box-shadow: 0 10px 30px rgba(40, 54, 24, 0.08);
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(254, 250, 224, 0.95), rgba(254, 250, 224, 0.4));
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary/20">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
+<span class="text-headline-md font-headline-md font-bold text-primary">Bazarcito</span>
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:scale-105 transition-transform" href="#history">¿Quienes somos?</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md hover:scale-105 transition-transform" href="#inicio">Inicio</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:scale-105 transition-transform" href="#catalog">Productos</a>
+</div>
+<div class="flex items-center gap-base">
+<button class="p-2 text-primary hover:scale-105 transition-all duration-200 active:scale-95">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="p-2 text-primary hover:scale-105 transition-all duration-200 active:scale-95">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="p-2 text-primary hover:scale-105 transition-all duration-200 active:scale-95">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex items-center overflow-hidden pt-16" id="inicio">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A sun-drenched, high-angle shot of an eclectic bazar filled with colorful textiles and handmade ceramic pots. The warm sunlight casts soft, organic shadows across the light cream stone flooring, highlighting the rich terracotta and deep olive green tones of the artisanal goods. The mood is welcoming and curated, evoking a sense of discovery and tradition in a modern digital light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbtAql4tpq0VAal5CY17eRsAiTIKTDCzNrIWt1IY8-dHRzHseIW9aP2dTaAPw5uQT76msw3ZgaS464Up2v4LW1dVfK3g1IfjUHQ9BR09AFNQ4zeIQVIh8EOKIkocAHqAwHhuVV266_MTgKyoqRFnCMvAl0zWjblqy-IgihQt0q6yqRzgeyquY9FotPnuDHv2qz_p3pm-7kde7Y_09FHCIwVJnQDvRVjSZpI0rsB9gT6g8kBQSmXYaxZZggDEMjhd6fJ008t9s6J2xm">
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop w-full">
+<div class="max-w-2xl">
+<span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md mb-md">
+                    Descubre lo Extraordinario
+                </span>
+<h1 class="font-display-lg text-display-lg text-primary mb-sm leading-tight">
+                    Bazarcito
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg max-w-lg">
+                    Recolectando historias...
+                </p>
+<div class="flex gap-sm">
+<a class="bg-primary text-on-primary px-lg py-4 rounded-xl font-label-md text-label-md hover:scale-[1.02] transition-transform curated-shadow active:scale-95 inline-block text-center" href="#catalog">
+                        Explorar Catálogo
+                    </a>
+<a class="border border-secondary text-secondary px-lg py-4 rounded-xl font-label-md text-label-md hover:bg-secondary/5 transition-colors inline-block text-center" href="#history">
+                        Nuestra Historia
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission, Vision, History -->
+<section class="py-xl bg-surface-container-low" id="history">
+    <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center mb-xl">
+            <div class="order-2 md:order-1">
+                <h2 class="font-headline-lg text-headline-lg text-tertiary mb-md">Nuestra Historia</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-md">
+                    Nacimos en el corazón de un antiguo taller, inspirados por la belleza de lo imperfecto.
+                    Bazar El Encuentro no es solo una tienda; es un puente entre manos artesanas y hogares que valoran el relato detrás de cada objeto.
+                    Durante décadas, hemos recolectado memorias transformadas en materia.
+                </p>
+            </div>
+            <div class="order-1 md:order-2 grid grid-cols-2 gap-sm">
+                <div class="space-y-sm pt-xl">
+                    <img src="img/imagen1.jpg" alt="Imagen 1"/>
+                    <div class="bg-primary-container p-md rounded-xl text-on-primary-container">
+                        <p class="font-headline-md text-headline-md font-bold italic">"Con amor e historia."</p>
+                    </div>
+                </div>
+                <div class="space-y-sm">
+                    <img src="img/imagen2.jpg" alt="Imagen 2"/>
+                    <img src="img/imagen3.jpg" alt="Imagen 3"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-gutter mt-xl">
+            <div class="p-lg md:p-xl bg-surface-container-highest rounded-xl border-l-8 border-primary flex flex-col md:flex-row gap-md md:gap-xl items-start">
+                <h3 class="font-headline-lg text-headline-lg text-primary md:w-1/4 shrink-0">Misión</h3>
+                <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed md:w-3/4">
+                    Trascender el concepto tradicional de comercio de segunda mano, actuando como curadores de memoria y guardianes de historias.
+                    Nos dedicamos a rescatar, preservar y comercializar antigüedades y prendas vintage, otorgándoles un nuevo ciclo de vida a través de la narrativa emocional.
+                    Buscamos conectar a nuestros clientes con la esencia de cada objeto, promoviendo un consumo consciente, ético y sostenible que valore el legado del pasado como una pieza fundamental del presente.
+                </p>
+            </div>
+
+            <div class="p-lg md:p-xl bg-surface-container-highest rounded-xl border-l-8 border-secondary flex flex-col md:flex-row gap-md md:gap-xl items-start">
+                <h3 class="font-headline-lg text-headline-lg text-secondary md:w-1/4 shrink-0">Visión</h3>
+                <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed md:w-3/4">
+                    Consolidarnos como el referente principal de comercio narrativo en la región, expandiendo nuestro modelo de negocio hacia una plataforma híbrida (física y digital) que sea reconocida por su excelencia en la curaduría histórica.
+                    Aspiramos a ser un motor de cambio en la industria del retail, demostrando que la rentabilidad puede coexistir con la preservación cultural y la sostenibilidad, inspirando a una comunidad global a encontrar valor en las historias que nos precedieron.
+                </p>
+            </div>
+
+            <div class="p-lg md:p-xl bg-surface-container-highest rounded-xl border-l-8 border-tertiary flex flex-col md:flex-row gap-md md:gap-xl items-start">
+                <h3 class="font-headline-lg text-headline-lg text-tertiary md:w-1/4 shrink-0">Valores</h3>
+                <ul class="list-disc pl-5 space-y-3 font-body-md text-on-surface-variant leading-relaxed md:w-3/4">
+                    <li>
+                        <strong class="text-tertiary">Autenticidad:</strong> Nos comprometemos con la verdad detrás de cada objeto. Investigamos y documentamos la procedencia de nuestras piezas para asegurar que la historia que contamos sea genuina.
+                    </li>
+                    <li>
+                        <strong class="text-tertiary">Sostenibilidad:</strong> Fomentamos la economía circular al dar una segunda oportunidad a objetos y prendas, reduciendo el impacto ambiental.
+                    </li>
+                    <li>
+                        <strong class="text-tertiary">Empatía:</strong> Tratamos con sensibilidad los objetos que han pertenecido a familias y recibimos con calidez a quienes buscan integrar esas historias en su propio hogar.
+                    </li>
+                    <li>
+                        <strong class="text-tertiary">Responsabilidad Social y Cultural:</strong> Buscamos ser un espacio que eduque al consumidor sobre la importancia de la conservación y el respeto por el patrimonio material.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Product Catalog Section -->
+<section class="py-xl bg-surface" id="catalog">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-xl gap-md">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Nuestro Catálogo</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Una selección increíble de objetos que cuentan una historia. Cada pieza es única.
+                    </p>
+</div>
+<div class="flex gap-xs">
+<button class="bg-surface-container-high px-4 py-2 rounded-full font-label-md text-label-md text-on-surface hover:bg-secondary-container transition-colors">Todo</button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-secondary-container transition-colors">Objetos</button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-secondary-container transition-colors">Ropa</button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-secondary-container transition-colors">muebles</button>
+</div>
+</div>
+<!-- Bento Grid Catalog -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Product Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden curated-shadow hover:scale-[1.02] transition-all duration-300" style="opacity: 1; transform: translateY(0px); transition: 0.6s ease-out;">
+<div class="aspect-square relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A stunning, handmade ceramic vase with an irregular, organic shape and a warm terracotta glaze. The vase is placed on a minimalist sand-colored stone pedestal against a soft cream background. The lighting is high-end, featuring subtle rim light that highlights the tactile texture of the clay and the sophisticated modern eclectic brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEy_S7ylvUgE9Y6l5h4NjuFEQNpW-WWp62U9dN7DE2SXM1krUSe4QxRYGcaIWWTpqInYecF2wS2gg1ktHw5WIzIayZ-NIvXw3JVAdfnQ9qILDry7xr278Hl8AKtrtf3m_5HYoSaO9uYtu84m2r9TiO0WIMhIxPqTVpNwAPbjuanAu2NZg-mjPCaouSYKWsJb_o6q0fPEo9B-8RhjJQa4SJvHmWshy4wSZc17PMssInrs4S012QjW15A02WQGzvTnCQq2kCsPNsXKfB">
+<span class="absolute top-4 left-4 px-3 py-1 bg-tertiary-container text-on-tertiary-container rounded-full text-label-sm font-label-sm">Handmade</span>
+</div>
+<div class="p-md">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Jarrón Tierra Sigilata</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Arcilla roja bruñida a mano siguiendo técnicas ancestrales.</p>
+<div class="flex justify-between items-center">
+<span class="font-headline-md text-headline-md text-primary">$120.00</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors active:scale-95">Ver más</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden curated-shadow hover:scale-[1.02] transition-all duration-300" style="opacity: 1; transform: translateY(0px); transition: 0.6s ease-out;">
+<div class="aspect-square relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A close-up of a premium, hand-woven wool textile featuring intricate geometric patterns in deep olive green, cream, and terracotta. The fabric is softly draped over an antique wooden chair, emphasizing its rich texture and quality. The lighting is warm and natural, creating an inviting and trustworthy vibe for a high-end marketplace experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBguranOdbM-T6oCecbjh8wZjVfonsUdtT2tAIdNVaikJuj5XM41yv1FqbNxX4mxa3bBeGobuMmtsRCtDSLdvQOXL09oZPyqqIJe0gpqRSJFbC8eFPxdZyd4r_pDrh3Tn4CuzVZGz4vUtfr2m-QkIyzBJagX5Lg9WBGT1uMJyydAMIm8MhL8TGTRWJGwUddLkZHEigRStkcwWWsNbuiTmWvosR60uO7ajMdCtOUY9oNdE7WozXQRJoXjs2qqfO7da8Ufm8NPPgjk_6V">
+<span class="absolute top-4 left-4 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-label-sm font-label-sm">Textiles</span>
+</div>
+<div class="p-md">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Manta Andes Heritage</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Lana de alpaca teñida naturalmente con raíces y cortezas.</p>
+<div class="flex justify-between items-center">
+<span class="font-headline-md text-headline-md text-primary">$215.00</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors active:scale-95">Ver más</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden curated-shadow hover:scale-[1.02] transition-all duration-300" style="opacity: 1; transform: translateY(0px); transition: 0.6s ease-out;">
+<div class="aspect-square relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A vintage decorative bronze candle holder with an elegant patina, sitting on a polished dark wood table. Behind it, a blurred warm interior lit by soft evening sun. The piece feels like a curated treasure, part of a sophisticated bazar discovery. The photography uses shallow depth of field to create a premium gallery-like whitespace effect around the object." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-VTZSxJdkHe7gfOoAZhy-TIVJvHZhOS-o3VzAWnO-iY4sJibvZOgmS-AQs1gt1RsEn_Up6ocUx4VQ980iZJ1KBi5eViNgNsfnvevThsA1DjYpPjDk-t1m9blcSQ_qUTAHFu7d6aJVZ4NjP43dPNg46zv220yMWW2JmDkseWDsKwOAUHNv8qSGQ7__A0CpiGDarptDhE1WlbnN0DlLYGxu1b_g0ZRkV3i9m20b0t9mAxjA-i0UpuJ0yzF73cTniozbHyUhw5V0KEEW">
+<span class="absolute top-4 left-4 px-3 py-1 bg-surface-variant text-on-surface-variant rounded-full text-label-sm font-label-sm">Vintage</span>
+</div>
+<div class="p-md">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Candelabro Bronce Siglo XX</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Pieza única restaurada con pátina original preservada.</p>
+<div class="flex justify-between items-center">
+<span class="font-headline-md text-headline-md text-primary">$85.00</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors active:scale-95">Ver más</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden curated-shadow hover:scale-[1.02] transition-all duration-300" style="opacity: 1; transform: translateY(0px); transition: 0.6s ease-out;">
+<div class="aspect-square relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A collection of handmade stoneware coffee mugs in varied earthy glazes including speckled cream, deep olive, and ochre. They are arranged artfully on a rustic wooden plank. The lighting is soft and directional, highlighting the handmade qualities and unique character of each piece. The aesthetic is warm, vibrant, and celebrates the treasure hunt feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOsODMxwdE9UCk8Igolzha8GJickGCXRYeboisO5UOMQDDppZqq1ec5hIRl-cqlaSyYUJ88BL0KbnOosfhMN_OCudz_eUBHpLUo0_lwk7iNE1fmAkc_dOppjlSCdPzEfA2kxxrAyZzhrV4qTmsFqbgp1Is71tw_K2ZRzMAmsO4sCPFdI9DOQaqnjiFNT_kOmyRiJe8NftqyUtTnEw1KkJLr3naI6ySF1AoBlKzi4uDjh5fdcXa_aIM1NZ_-jLrsKepZV8-RKaZUhKD">
+<span class="absolute top-4 left-4 px-3 py-1 bg-tertiary-container text-on-tertiary-container rounded-full text-label-sm font-label-sm">Cerámica</span>
+</div>
+<div class="p-md">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Set Mugs Alquimia</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Gres horneado a alta temperatura con esmaltes reactivos.</p>
+<div class="flex justify-between items-center">
+<span class="font-headline-md text-headline-md text-primary">$45.00</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors active:scale-95">Ver más</button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden curated-shadow hover:scale-[1.02] transition-all duration-300" style="opacity: 1; transform: translateY(0px); transition: 0.6s ease-out;">
+<div class="aspect-square relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Hand-carved wooden kitchen utensils like spoons and salad servers made from rich walnut wood, resting on a clean marble surface. The wood grain is prominent and beautiful. The shot is high-key and modern, emphasizing the curated and human feel of the bazar's kitchenware collection. The mood is serene and technologically clean yet tactile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAboGoAfMATssy_BoTLS7NEeOs5qOINOFWsG4pci9_TTKyL6_-7HiC5PPAL4aeBoXxNquLJf4bDdTe4JjV5ai6hdZqjbCYME9Z8tSHnZf-SIl8IXBqeMZB987YhtNk4j5JPokJe2h4qJEoXvw2mhL2S-TT7wlQ-6IdFUs-TLLP9j8D0v1-S1hPBQ4LMeMjdbkkVgHcfLlgWfgiZRNxOYkQy50UQv3raKAKLaxrOBqQc3NA-uqXqxsR67UDpSTuM2NikUoV4qj_VL9fa">
+<span class="absolute top-4 left-4 px-3 py-1 bg-tertiary-container text-on-tertiary-container rounded-full text-label-sm font-label-sm">Madera</span>
+</div>
+<div class="p-md">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Set Utensilios Nogal</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Tallado a mano en madera recuperada de nogal negro.</p>
+<div class="flex justify-between items-center">
+<span class="font-headline-md text-headline-md text-primary">$68.00</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors active:scale-95">Ver más</button>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden curated-shadow hover:scale-[1.02] transition-all duration-300" style="opacity: 1; transform: translateY(0px); transition: 0.6s ease-out;">
+<div class="aspect-square relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A minimalist woven basket made of natural seagrass, styled in a bright modern living room with soft cream walls and wooden accents. The basket holds a few art books and a linen throw. The scene communicates trust and high-quality lifestyle curation, with a color palette dominated by warm neutrals and soft olive greens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCApt1OFo3CsyG97YRRpfBs8TrCRFf1Vt9DZfYvXmVPmluPQCJU60_FyhYhXbqTq0UIa1GGXptqPlNuEfZ5-iOxELkFTi7DJTSyXeP733s2BRM7u9Moau63u1l7vCh2hko9MtofGMYBidsJLDj75IxUBE-qBC631tIm1ekYxzMZlmsu4PZO7ujpMD623UHi69r0yePwEPxbsL2y9kgPeNEUoaLgY9R2FVKU5X4ne314zWETLu7RPL1jdCEpboxJdnRJcGTxfzizruXG">
+<span class="absolute top-4 left-4 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-label-sm font-label-sm">Cestería</span>
+</div>
+<div class="p-md">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Cesto Nido Natural</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Fibras naturales tejidas por comunidades locales del litoral.</p>
+<div class="flex justify-between items-center">
+<span class="font-headline-md text-headline-md text-primary">$95.00</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors active:scale-95">Ver más</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-xl text-center">
+<button class="border-2 border-primary text-primary px-xl py-4 rounded-xl font-headline-md text-headline-md hover:bg-primary/5 transition-colors group" style="opacity: 1; transform: translateY(0px); transition: 0.6s ease-out;">
+                    Cargar más tesoros
+                    <span class="material-symbols-outlined align-middle ml-2 group-hover:translate-y-1 transition-transform">expand_more</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-xl mt-auto bg-surface-container-high border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto lg:grid-cols-3">
+<div class="space-y-md">
+<span class="text-headline-md font-headline-md text-primary">Bazarcito</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                    Recolectando historias.
+                </p>
+<div class="flex gap-sm">
+<a class="text-primary hover:scale-110 transition-transform" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="text-primary hover:scale-110 transition-transform" href="#"><span class="material-symbols-outlined">camera</span></a>
+<a class="text-primary hover:scale-110 transition-transform" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div class="space-y-md">
+<h4 class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-widest">Nuestra Tienda</h4>
+<ul class="space-y-xs">
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">Facebook</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">Instagram</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">Twitter</a></li>
+</ul>
+</div>
+<div class="space-y-md">
+<h4 class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-widest">Información</h4>
+<ul class="space-y-xs">
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">Xalapa, Veracruz</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">Terminos y condiciones</a></li>
+</ul>
+<div class="pt-md">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 Bazarcito Marketplace.</p>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and subtle scroll effects
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+
+        // Simple animation trigger for cards on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('#catalog .group').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(20px)";
+            el.style.transition = "all 0.6s ease-out";
+            observer.observe(el);
+        });
+    </script>
+
+
+</body></html>
